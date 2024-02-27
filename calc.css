@@ -1,0 +1,37 @@
+/* padding defines space between text and boerder */
+
+/* margin define space outside the border */
+body {
+	background-color: rgb(206, 227, 234);
+}
+
+h1 {
+	font-family: Verdana;
+	padding: 15px;
+}
+
+a:link{
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover{
+	color: aquamarine;
+	text-decoration: underline;
+}
+
+a:visited{
+	color: rgb(91, 147, 7);
+	text-decoration: none;
+
+}
+
+a:active{
+	color: yellow;
+	text-decoration: none;
+
+}
+
+.flower{
+	text-align: center;
+}
