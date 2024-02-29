@@ -35,3 +35,30 @@ a:active{
 .flower{
 	text-align: center;
 }
+                                        /* TABLE */
+/* i want some flowers as background-image in this table */
+/* table{
+	background-color:lightpink;
+} */
+
+table, th, tr{
+	border: 1px solid mediumorchid;
+	/* border-collapse: collapse; */
+	border-radius: 10px;
+}
+
+td{
+	text-align: center;
+	border: 1px solid rgb(224, 136, 236);
+	border-radius: 10px;
+	background-color: transparent;
+	padding: 15px;
+}
+
+tr:nth-child(odd){
+	background-color: rgba(127, 255, 236, 0.531);
+	height: 30px;
+}
+td:hover{
+	background-color: azure;
+}
