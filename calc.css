@@ -62,3 +62,8 @@ tr:nth-child(odd){
 td:hover{
 	background-color: azure;
 }
+
+.container {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
