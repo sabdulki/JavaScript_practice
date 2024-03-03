@@ -3,6 +3,8 @@
 /* margin define space outside the border */
 body {
 	background-color: rgb(206, 227, 234);
+	margin: 0;
+	padding: 0;
 }
 
 h1 {

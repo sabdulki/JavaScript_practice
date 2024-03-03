@@ -1,129 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>learn_HTML</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="calc.css">
-  </head>
-  <body>
-    <h1 style="font-size: x-large">learn_HTML</h1>
-    <p title="these guys who create websites">
-      Hi, I'm going to become a <ins>frontend developer</ins>
-    </p>
-    <p style="color: darkgray">
-      So I started my learning journey with
-      <a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a>
-    </p>
-    <hr/>
-    
-    <pre style="padding: 15px; margin: 15px; border: 3px solid rgb(128, 203, 224)">
-      some poem over there
-      will help me deal with that
-      it remains all spaces there
-      and doesn't eat them then
-	  </pre>
-    <hr/>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<link rel="icon" type="image/x-icon" href="./assets/imgs/favicon.ico">
+	<link rel="stylesheet" href="./assets/styles/nav.css">
+	<link rel="stylesheet" href="./assets/styles/global.css">
+	<link rel="stylesheet" href="./assets/styles/calc.css">
+</head>
 
-    <p>Text new poem <abbr title="as soon as possible">ASAP</abbr></p>
-    <p style="font-family: cursive; margin-left: 2em">
-      Click on camomile to see more flowers
-    </p>
-    <a
-      href="https://unsplash.com/s/photos/flowers"
-      title="more beutiful flowers!"
-      target="_blank">
-      <img
-        src="Camomile-No-Background.png"
-        alt="camomile"
-        style="width: 150px; height: 150px; margin-left: 1em"
-    /></a>
-    <!--it's more safe and better to use style atribute to specifiy width and height-->
-    <button onclick="document.location = 'calc.html'">My page</button>
-    <!--cannot get default asp. because there are no this file yet-->
+<body>
+	<ul class="navigation">
+		<li class="nav"><a href="./home.html"><img class="nav" src="./assets/imgs/favicon.ico" alt="favicon" style="height: 25px; width: 25px;"></a></li>
+		<li class="nav"><a href="./home.html">Home</a></li>
+		<li class="nav"><a href="./learn_html.html">Learn_HTML</a></li>
+		<li class="nav"><a href="./calc.html">Calculator</a></li>
+	</ul>
 
-    <p>
-      If just pictures aren't enought for you, there are more information about
-      them <img class="emoji" src="emoji.png" width="13" height="13" />
-    </p>
+	<!-- everything on the page except the navigation -->
+	<div class="content">
+		<div class="calc">
+			<div class="grid-container">
+				<!-- <div class="grid-result"></div> -->
+				<div class="grid-item">0</div>
+				<div class="grid-item">+</div>
+				<div class="grid-item">-</div>
+				<div class="grid-item">C</div>
+				<div class="grid-item">1</div>
+				<div class="grid-item">2</div>
+				<div class="grid-item">3</div>
+				<div class="grid-item">*</div>
+				<div class="grid-item">4</div>
+				<div class="grid-item">5</div>
+				<div class="grid-item">6</div>
+				<div class="grid-item">/</div>
+				<div class="grid-item">7</div>
+				<div class="grid-item">8</div>
+				<div class="grid-item">9</div>
+				<div class="grid-item">=</div>
+			</div>
+		</div>
 
-    <div>
-      <a
-      href="https://en.wikipedia.org/wiki/Flower"
-      class="flower,"
-      target="_blank"
-      >More flowers!</a>
-    </div>
 
-    <div style="height: 73px;">
-      <img
-      src="wrapped-gifts-birthday-presents.gif"
-      alt="bunny brings a flower"
-      style="width: 73px; height: 73px; float: inline-start"/>
-    </div>
-
-    <div class="container">
-
-      <div>
-        <table style="width:100%">
-          <colgroup>
-            <col span="2" style="background-color: transparent">
-            <col span="1" style="background-color: rgb(180, 214, 245);">
-          </colgroup>
-          <caption>The most popular flowers</caption>
-          <tr>
-            <th style="width: 20%;">Type of flower</th>
-            <th style="width: 60%;">Feature</th>
-            <th style="width: 20%;">Cost</th>
-          </tr>
-          <tr>
-            <td>Camomile</td> 
-            <td>bla bla</td>
-            <td>15 $</td> 
-          </tr>
-          <tr>
-            <td>Hydrangea</td> 
-            <td>bla bla</td>
-            <td>25 $</td>
-          </tr>
-          <tr>
-            <td>Rose</td>
-            <td>bla bla</td>
-            <td>30 $</td> 
-          </tr>
-          <tr>
-            <td >Flower 1</td>
-            <td rowspan="2">same bla bla</td>
-            <td>30 $</td> 
-          </tr>
-          <tr>
-            <td>Flower 2</td>
-            <!-- <td>same bla bla</td> -->
-            <td>30 $</td> 
-          </tr>
-        </table>
-      </div>
-    
-      <div>
-        <p style="text-align: center; margin: 0%;">The <span style="background-color: rgba(11, 89, 184, 0.303);">list</span> of flowers</p>
-        <ol type="I">
-          <li>Rose</li>
-          <li>camomile</li>
-            <ul>
-              <li>kind 1</li>
-              <li>kind 2</li>
-            </ul>
-            <li>lily</li>
-              <dl>
-                  <dt>peony</dt><dd>: plants known for their large, extravagant blooms and lush, bushy foliage</dd>
-                  <dt>tulip</dt><dd>: iconic spring-blooming flowers</dd>
-              </dl>
-        </ol>
-      </div>
-    </div>
-    <script>
-      src = "./calculadore.js";
-    </script>
-  </body>
+	</div>
+</body>
 </html>
