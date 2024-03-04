@@ -69,3 +69,16 @@ td:hover{
 	display: grid;
 	grid-template-columns: 50% 50%;
 }
+
+.img-iframe-container{
+	display: flex;
+	flex-direction: row;
+	/* align-items: ; */
+}
+
+.img-iframe{
+	padding: 30px;
+	font-family:cursive;
+	text-align: center;
+
+}

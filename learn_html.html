@@ -16,6 +16,7 @@
       <li class="nav"><a href="./home.html">Home</a></li>
       <li class="nav"><a href="./learn_html.html">Learn_HTML</a></li>
       <li class="nav"><a href="./calc.html">Calculator</a></li>
+      <li class="nav"><a href="./bookmarks.html">Bookmarks</a></li>
     </ul>
   
     <h1 style="font-size: x-large">learn_HTML</h1>
@@ -37,18 +38,27 @@
     <hr/>
 
     <p>Text new poem <abbr title="as soon as possible">ASAP</abbr></p>
-    <p style="font-family: cursive; margin-left: 2em">
-      Click on camomile to see more flowers
-    </p>
-    <a
-      href="https://unsplash.com/s/photos/flowers"
-      title="more beutiful flowers!"
-      target="_blank">
-      <img
-        src="./assets/imgs/Camomile-No-Background.png"
-        alt="camomile"
-        style="width: 150px; height: 150px; margin-left: 1em"
-    /></a>
+    <div class="img-iframe-container">
+      <div class="img-iframe">
+        <p>
+          Click on camomile to see more flowers
+        </p>
+        <a
+          href="https://unsplash.com/s/photos/flowers"
+          title="more beutiful flowers!"
+          target="_blank">
+          <img
+            src="./assets/imgs/Camomile-No-Background.png"
+            alt="camomile"
+            style="width: 150px; height: 150px;"/>
+        </a>
+      </div>
+      <div class="img-iframe">
+        <p>Or you can see the content of websites using embed windows</p>
+        <!-- BUG BUG BUG BUG BUG  with width and scroll bar BUG BUG BUG BUG BUG -->
+        <iframe src="calc.html" frameborder="2" style="height: auto; width: auto;" title="calculator"></iframe>
+      </div>
+    </div>
     <!--it's more safe and better to use style atribute to specifiy width and height-->
     <button onclick="document.location = 'calc.html'">My page</button>
     <!--cannot get default asp. because there are no this file yet-->
@@ -132,6 +142,9 @@
         </ol>
       </div>
     </div>
+
+    <p>You can create some bookmarks on your own website using id. Move to some bookmarks!</p>
+    <p>Chapter <a href="./bookmarks.html#C4">4 (four)</a> or chapetr <a href="./bookmarks.html#C17">17 (seventeen)</a></p>
 
     
     <script>
