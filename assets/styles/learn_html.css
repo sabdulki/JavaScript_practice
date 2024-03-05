@@ -7,6 +7,10 @@ body {
 	padding: 0;
 }
 
+.content{
+	margin: 35px;
+}
+
 h1 {
 	font-family: Verdana;
 	padding: 15px;
@@ -63,6 +67,7 @@ tr:nth-child(odd){
 }
 td:hover{
 	background-color: azure;
+	transition: background 0.2s;
 }
 
 .container {
