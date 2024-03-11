@@ -2,9 +2,14 @@
 
 /* margin define space outside the border */
 body {
+	/* background-image: url('https://i0.wp.com/www.southsideblooms.com/wp-content/uploads/2023/01/pexels-lisa-2106037.jpg?w=1200&ssl=1'); */
+	/* background-color: rgba(114,205,227, 0.5); */
 	background-color: rgb(206, 227, 234);
 	margin: 0;
 	padding: 0;
+	/* background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; */
 }
 
 .content{
