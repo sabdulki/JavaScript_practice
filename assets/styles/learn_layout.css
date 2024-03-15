@@ -1,0 +1,39 @@
+/* body {
+	display: grid;
+	grid-template-rows: auto 1fr auto; /* Определяем три строки: автоматическая высота, растягиваемая часть, автоматическая высота 
+	min-height: 100vh;
+} */
+
+section {
+	display:flex;
+}
+
+/* ul {
+	flex: 1;
+}
+
+article {
+	flex: 5;
+} */
+
+@media (max-width: 1000px) {
+	section {
+		flex-direction: column;
+	}
+}
+
+#div1, #div2, #div3 {
+	border: 2px solid black;
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	height: 260px;
+	width: 350px;
+}
+
+/* footer {
+	background-color: navy;
+	padding: 10px;
+	text-align: center;
+	color: white;
+} */
