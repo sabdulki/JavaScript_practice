@@ -11,3 +11,14 @@ function drop(ev) {
 function allowDrop(ev) {
 	ev.preventDefault();
 }
+
+function clickCounter() {
+
+	let clickCount = sessionStorage.getItem("clickCount");
+	if (clickCount != null && Number(clickCount) != NaN)
+		clickCount = Number(clickCount)+1;
+	else
+		clickCount = 0;
+	document.getElementById("imgClick").innerHTML = "You dragged the img " + clickCount + " time(s).";
+	sessionStorage.setItem("clickCount", clickCount);
+}
