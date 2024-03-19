@@ -22,3 +22,7 @@ function clickCounter() {
 	document.getElementById("imgClick").innerHTML = "You dragged the img " + clickCount + " time(s).";
 	sessionStorage.setItem("clickCount", clickCount);
 }
+
+function changeImg(){
+	
+}
