@@ -13,6 +13,7 @@
 	width: 25%;
 	height: 150px;
 	border: 5px solid rgba(77, 77, 236, 0.736);
+	margin: 15px;
 }
 
 .grid-container{
