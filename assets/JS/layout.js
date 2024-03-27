@@ -23,6 +23,17 @@ function clickCounter() {
 	sessionStorage.setItem("clickCount", clickCount);
 }
 
+let marg_flower = true;
+
 function changeImg(){
-	
+	let marg = document.getElementById("marg_img");
+	if (marg_flower)
+		marg.src = "./assets/imgs/marguerite.jpeg" 
+	else {
+		marg.src = "./assets/imgs/lilies.webp";
+		marg.style.width = "350px";
+		marg.style.height = "260px";
+		marg.alt = "lilies";
+	}
+	marg_flower = !marg_flower;
 }
