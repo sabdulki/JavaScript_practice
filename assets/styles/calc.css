@@ -26,12 +26,35 @@
 .grid-item{
 	border: 1px solid black;
 	text-align: center;
-
+	
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 	align-items: center;
+	background-color: rgb(207, 229, 249); 
+	user-select: none;
+	/* background-color: rgb(206, 227, 234);  */
 }
+
+.grid-item:hover{
+	cursor: pointer;
+	background-color:  rgb(255, 255, 255);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* display: flex; */
+
+.result{
+	border: 1px solid black;
+	height: 25px;
+	width: 100px;
+	margin: 15px;
+	overflow-x: auto;
+}
+
+/* .result::-webkit-scrollbar {
+    width: 2px; /* Ширина скроллбара 
+  } */
 
 .grid-result{
 	grid-row: 1;
