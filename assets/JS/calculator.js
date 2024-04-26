@@ -45,20 +45,22 @@ function createEquation(str)
 	let sign_list = [];
 	let result;
 
-	for (let i = 0; i < str.length, i++;)
+	for (let i = 0; i < str.length; i++)
 	{
 		if (Number(str[i]))
 			num += str[i];
-		if (Number(str[i]) && isSign(str[i+1])){
-			v1 = Number(num);
-			console.log(v1);
-			num_list.push(v1);
+		if (num !== "" && Number(str[i]) && isSign(str[i+1])){
+			// num += str[i];
+			num_list.push(Number(num));
+			num = "";
 		}
 		else if (isSign(str[i]))
 		{
 			sign_list.push(str[i]);
 		}
 	}
+	if (num !== "")
+		num_list.push(Number(num));
 	result = solveEquation(num_list, sign_list);
 	return(result.toString());
 
@@ -73,15 +75,22 @@ function solveEquation(num_list, sign_list)
 	let num_i = 0;
 	let sign_i = 0;
 	let oper_len = num_list.length + sign_list.length;
-	for (let i = 0; i < oper_len, i++;){
-		operations.push(num_list[num_i++]);
-		operations.push(sign_list[sign_i++]);
+	let num_len = num_list.length;
+	let sign_len = sign_list.length
+	for (let i = 0; i < oper_len; i++){
+		if (num_i < num_len)
+			operations.push(num_list[num_i++]);
+		if (sign_i < sign_len)
+			operations.push(sign_list[sign_i++]);
 	}
 	i = 0;
 	let strongSignInd = operations.findIndex(findMultDiv);
 	let strongSign;
 	let newNum;
 	// loop while count of elements != 1
+
+	//another while loop where i will call different operations and if I have a result of this operation, 
+	// i put it into the other one or return the value.
 	while(operations.length != 1)
 	{
 		if (operations.findIndex(findMultDiv))
@@ -90,8 +99,8 @@ function solveEquation(num_list, sign_list)
 				newNum = operations[strongSignInd - 1] * operations[strongSignInd + 1];
 			else if (operations[strongSignInd] == '/')
 				newNum = operations[strongSignInd - 1] / operations[strongSignInd + 1];
-			operations[strongSignInd - 1] = Number(newNum);
-			operations.slice(strongSignInd, 2); //удаляю уже ненужные элементы
+			// operations[strongSignInd - 1] = Number(newNum);
+			// operations = operations.slice(strongSignInd, 2); //удаляю уже ненужные элементы
 		}
 		else if (operations.findIndex(findPlusMin))
 		{
@@ -99,11 +108,12 @@ function solveEquation(num_list, sign_list)
 				newNum = operations[strongSignInd - 1] + operations[strongSignInd + 1];
 			else if (operations[strongSignInd] == '-')
 				newNum = operations[strongSignInd - 1] - operations[strongSignInd + 1];
-			operations[strongSignInd - 1] = Number(newNum);
-			operations.slice(strongSignInd, 2); //удаляю уже ненужные элементы
+			// operations[strongSignInd - 1] = Number(newNum);
+			// operations = operations.slice(strongSignInd, 2); //удаляю уже ненужные элементы
 		}
 	}
-	return (operations[0]);
+	return (newNum);
+	// return (operations[0]);
 }
 
 function findMultDiv(input){
